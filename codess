@@ -1,0 +1,28 @@
+document.getElementById("createAlternativeBtn").addEventListener("click", function () {
+    const password = passwordInput.value;
+
+    if (!password) {
+        document.getElementById("strongerAlternative").value = "";
+        return;
+    }
+
+    let alternative = password;
+
+    if (!/[A-Z]/.test(alternative)) {
+        alternative += "A";
+    }
+
+    if (!/[0-9]/.test(alternative)) {
+        alternative += "7";
+    }
+
+    if (!/[^A-Za-z0-9]/.test(alternative)) {
+        alternative += "!";
+    }
+
+    while (alternative.length < 12) {
+        alternative += "X";
+    }
+
+    document.getElementById("strongerAlternative").value = alternative;
+});

@@ -1,0 +1,10 @@
+<button id="alternativeBtn" class="generate">
+    Create Stronger Alternative
+</button>
+
+<input
+    type="text"
+    id="alternativePassword"
+    placeholder="Stronger alternative"
+    readonly
+>

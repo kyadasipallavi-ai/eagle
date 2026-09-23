@@ -1,0 +1,19 @@
+<button onclick="
+    let p = document.getElementById('password').value;
+    let a = document.querySelector('input[placeholder=\\'Stronger alternative\\']');
+
+    if (p === '') {
+        a.value = 'Enter a password first';
+    } else {
+        let n = p;
+
+        if (!/[A-Z]/.test(n)) n += 'A';
+        if (!/[0-9]/.test(n)) n += '7';
+        if (!/[^A-Za-z0-9]/.test(n)) n += '!';
+        while (n.length < 12) n += 'X';
+
+        a.value = n;
+    }
+">
+    Create Stronger Alternative
+</button>

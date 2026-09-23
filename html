@@ -1,0 +1,17 @@
+<script>
+document.getElementById("createAlternativeBtn").addEventListener("click", function () {
+
+    const password = document.getElementById("password").value;
+
+    if (password === "") {
+        document.getElementById("suggestion").textContent =
+            "Enter a password first.";
+        return;
+    }
+
+    const alternative =
+        password + "@9X!";
+
+    document.getElementById("alternativePassword").value = alternative;
+});
+</script>
